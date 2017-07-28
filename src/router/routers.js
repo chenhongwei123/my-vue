@@ -21,14 +21,14 @@ const router = new VueRouter({
 			path: '/second',
 			component: two,
 			children: [{
-					path: '/first2',
+					path: 'first2',
 					component: News
-				},
-				{
-					path: '/second',
-					component: two
 				}
 			]
+		},
+		{
+			path: '/',
+			component: two
 		}
 	]
 })

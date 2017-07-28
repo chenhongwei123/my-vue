@@ -1,18 +1,18 @@
 <template>
 	<div id="two">
-		<ul v-for="list in lists">
+		<!--<ul v-for="list in lists">
 			<li>{{list.text}}</li>
-		</ul>
-		<ul>
+		</ul>-->
+		<!--<ul>
 			<li v-for="list in articles">{{list.title}}</li>
-		</ul>
+		</ul>-->
         <firstcomponent></firstcomponent>
-		<!--<router-link to="/first2">sji</router-link>
-		<router-view class="view"></router-view>-->
+		<router-link to="/second/first2">点击</router-link>
+		<router-view></router-view>
 		<!--<li>
 				<router-link to="/second">点我跳转到第二页</router-link>
 			</li>-->
-
+        
 	</div>
 </template>
 
@@ -43,7 +43,6 @@
 			this.douban()
 		},
 		methods: {
-			
 			douban: function() {
 				this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=10', {}, {
 					headers: {
@@ -57,7 +56,7 @@
 					console.log(this.articles)
 				}).then(function(response) {
 					// 这里是处理错误的回调
-					console.log(response)
+					//console.log(response)
 				})
 			}
 		}
