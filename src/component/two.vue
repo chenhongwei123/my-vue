@@ -1,8 +1,8 @@
 <template>
 	<div id="two">
-		<!--<ul v-for="list in lists">
+		<ul v-for="list in lists">
 			<li>{{list.text}}</li>
-		</ul>-->
+		</ul>
 		<!--<ul>
 			<li v-for="list in articles">{{list.title}}</li>
 		</ul>-->
@@ -11,7 +11,7 @@
 			<button @click="increment">increment</button>
 		</div>
 
-	
+	   
 		<router-link to="/second/first2">点击</router-link>
 		<router-view></router-view>
 		<!--<li>
@@ -68,6 +68,7 @@
 			},
 			increment() {
 				this.$store.commit('increment')
+				console.log(this.$store.state.count)
 			}
 		}
 

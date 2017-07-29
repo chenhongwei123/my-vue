@@ -7,6 +7,8 @@ import VueResource from 'vue-resource'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import store from './vuex/vuex.js'
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
 //import Vuex from 'vuex'
 
 Vue.config.productionTip = false
@@ -15,6 +17,7 @@ Vue.config.productionTip = false
 Vue.config.debug = true;
 Vue.use(VueResource);
 Vue.use(ElementUI)
+Vue.use(iView);
 //Vue.use(Vuex)
 
 //const store = new Vuex.Store({

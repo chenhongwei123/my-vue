@@ -9,6 +9,8 @@ Vue.use(VueRouter);
 import two from '../component/two.vue'
 import News from '../component/News.vue'
 import firstcomponent from '../component/firstcomponent.vue'
+import gwc from '../component/gwc.vue'
+import Card from '../component/Card.vue'
 // 创建一个路由器实例
 // 并且配置路由规则
 const router = new VueRouter({
@@ -30,6 +32,16 @@ const router = new VueRouter({
 		{
 			path: '/',
 			component: two
+		},
+		{
+			path: '/gwc',
+			component: gwc
+			
+		},
+		{
+			path: '/Card',
+			component: Card
+			
 		}
 	]
 })
