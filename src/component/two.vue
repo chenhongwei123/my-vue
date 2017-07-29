@@ -6,13 +6,18 @@
 		<!--<ul>
 			<li v-for="list in articles">{{list.title}}</li>
 		</ul>-->
-        <firstcomponent></firstcomponent>
+		<div>
+			{{ $store.state.count }}
+			<button @click="increment">increment</button>
+		</div>
+
+	
 		<router-link to="/second/first2">点击</router-link>
 		<router-view></router-view>
 		<!--<li>
 				<router-link to="/second">点我跳转到第二页</router-link>
 			</li>-->
-        
+
 	</div>
 </template>
 
@@ -38,7 +43,9 @@
 			}
 
 		},
-		components: {firstcomponent},
+		components: {
+			firstcomponent
+		},
 		mounted: function() {
 			this.douban()
 		},
@@ -58,8 +65,12 @@
 					// 这里是处理错误的回调
 					//console.log(response)
 				})
+			},
+			increment() {
+				this.$store.commit('increment')
 			}
 		}
+
 	}
 </script>
 
