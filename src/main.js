@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-default/index.css'
 import store from './vuex/vuex.js'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 //import Vuex from 'vuex'
 
 Vue.config.productionTip = false
@@ -37,4 +38,7 @@ const app = new Vue({
 	router: router,
 	store: store,
 	render: h => h(App),
+	components: {
+		PulseLoader
+	}
 }).$mount('#app')

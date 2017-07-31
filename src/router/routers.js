@@ -11,6 +11,7 @@ import News from '../component/News.vue'
 import firstcomponent from '../component/firstcomponent.vue'
 import gwc from '../component/gwc.vue'
 import Card from '../component/Card.vue'
+import loading from '../component/loading.vue'
 // 创建一个路由器实例
 // 并且配置路由规则
 const router = new VueRouter({
@@ -41,6 +42,11 @@ const router = new VueRouter({
 		{
 			path: '/Card',
 			component: Card
+			
+		},
+		{
+			path: '/loading',
+			component: loading
 			
 		}
 	]

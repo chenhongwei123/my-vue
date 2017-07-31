@@ -59,6 +59,7 @@
 						</el-submenu>
 						<el-menu-item index="2" @click="url_to"><i class="el-icon-menu"></i>导航二</el-menu-item>
 						<el-menu-item index="3"  @click="url_to2"><i class="el-icon-setting"></i>导航三</el-menu-item>
+						<el-menu-item index="4"  @click="url_to3"><i class="el-icon-setting"></i>导航四</el-menu-item>
 					</el-menu>
 				</div>
 			</el-col>
@@ -120,6 +121,9 @@
 			},
 			url_to2(){
 				this.$router.push({ path: '/Card' })
+			},
+			url_to3(){
+				this.$router.push({ path: '/loading' })
 			}
 		}
 	}
