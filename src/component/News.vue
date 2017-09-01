@@ -1,5 +1,6 @@
 <template>
 	<div id="News">
+			
 		<div>
 			{{ $store.state.count }}
 			<button @click="increment">increment</button>

@@ -4,19 +4,20 @@
 		<!--<ul v-for="list in lists">
 			<li>{{list.text}}</li>
 		</ul>-->
+	
+		
 		<ul>
 			<li v-for="list in articles">{{list.title}}</li>
+			
 		</ul>
+		
 		<div>
 			{{ $store.state.count }}
 			<button @click="increment">increment</button>
 		</div>
-
+        
 		<router-link to="/second/first2">点击</router-link>
 		<router-view></router-view>
-		<!--<li>
-				<router-link to="/second">点我跳转到第二页</router-link>
-			</li>-->
 
 	</div>
 </template>
@@ -42,7 +43,6 @@
 				articles: [],
 				loadFlag: false
 			}
-
 		},
 		components: {
 			firstcomponent

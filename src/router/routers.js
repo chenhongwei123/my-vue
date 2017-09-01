@@ -22,18 +22,21 @@ const router = new VueRouter({
 			component:firstcomponent
 		},
 		{
+			path:'/',
+			component:firstcomponent
+		},
+		{
 			path: '/second',
 			component: two,
 			children: [{
 					path: 'first2',
 					component: News
-				}
-			]
+			        }]
 		},
-		{
-			path: '/',
-			component: two
-		},
+//		{
+//			path: '/',
+//			component: two
+//		},
 		{
 			path: '/gwc',
 			component: gwc
