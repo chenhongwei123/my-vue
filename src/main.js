@@ -5,35 +5,44 @@ import App from './App'
 import router from './router/routers.js'
 import VueResource from 'vue-resource'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
-import store from './vuex/vuex.js'
-import iView from 'iview';
-import 'iview/dist/styles/iview.css';
+import VueLazyload from 'vue-lazyload'
+
+
+
+  import './assets/css/index.scss'
+
+
+import 'element-ui/lib/theme-chalk/index.css'
+// import store from './vuex/vuex.js'
+//import iView from 'iview';
+//import 'iview/dist/styles/iview.css';
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 //import Vuex from 'vuex'
+import infiniteScroll from 'vue-infinite-scroll'
 
+import store from './store'
+import './mock/index.js' 
+// import './assets/css/index.scss'
 Vue.config.productionTip = false
 
 //开启debug模式
 Vue.config.debug = true;
 Vue.use(VueResource);
 Vue.use(ElementUI)
-Vue.use(iView);
+Vue.use(infiniteScroll)
+
+Vue.use(VueLazyload, {
+  loading: require('./base/loading/loading.gif')
+})
+
+
+// require('./mock/index.js')
+//Vue.use(iView);
 //Vue.use(Vuex)
 
-//const store = new Vuex.Store({
-//	state: {
-//		count: 1
-//	},
-//	mutations: {
-//		increment(state) {
-//			// 变更状态
-//			state.count++
-//		}
-//	}
-//})
 
-// 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
+
+// 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上
 const app = new Vue({
 	router: router,
 	store: store,

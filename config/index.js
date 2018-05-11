@@ -27,7 +27,25 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/gwcs': {
+        target: 'http://localhost:3000'
+      },
+      "/list": {
+        target: 'http://www.ofree8.com:11000',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/list': 'http://www.ofree8.com:11000' //这里理解成用‘/api’代替target里面的地址，后面组件中我们掉接口时直接用api代替 比如我要调用'http://40.00.100.100:3002/user/add'，直接写‘/api/user/add’即可
+        }
+      }
+      //  	'/user':{
+      //  		target:'http:www.ofree8.com:11000/listusers',
+      //  		changeOrigin: true,
+      //      pathRewrite: {
+      //        '^/user': ''//这里理解成用‘/api’代替target里面的地址，后面组件中我们掉接口时直接用api代替 比如我要调用'http://40.00.100.100:3002/user/add'，直接写‘/api/user/add’即可
+      //      }
+      //  	}
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

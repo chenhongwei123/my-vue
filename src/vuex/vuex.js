@@ -1,18 +1,18 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+// import Vue from 'vue'
+// import Vuex from 'vuex'
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
-const store = new Vuex.Store({
-	state: {
-		count: 1
-	},
-	mutations: {
-		increment(state) {
-			// 变更状态
-			state.count++
-		}
-	}
+// const store = new Vuex.Store({
+// 	state: {
+// 		count: 1
+// 	},
+// 	mutations: {
+// 		increment(state) {
+// 			// 变更状态
+// 			state.count++
+// 		}
+// 	}
 
 	//	// 存储状态值
 	//	state: {
@@ -30,5 +30,5 @@ const store = new Vuex.Store({
 	//	actions: {
 	//		...
 	//	}
-})
-export default store
+// })
+// export default store
